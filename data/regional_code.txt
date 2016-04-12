@@ -1,0 +1,27 @@
+42	Alsace			 
+72	Aquitaine			
+83	Auvergne			
+25	Basse-Normandie			
+26	Bourgogne			
+53	Bretagne			
+24	Centre			
+21	Champagne-Ardenne			
+94	Corse			
+43	Franche-Comte			
+1	Guadeloupe			
+3	Guyane			
+23	Haute-Normandie			
+11	ile-de-France			
+4	La Reunion			
+91	Languedoc-Roussillon			
+74	Limousin			
+41	Lorraine			
+2	Martinique			
+6	Mayotte			
+73	Midi-Pyrenees			
+31	Nord Pas de Calais			
+52	Pays de la Loire			
+22	Picardie			
+54	Poitou-Charentes			
+93	Provence-Alpes-Cote d'Azur			
+82	Rhone-Alpes			
