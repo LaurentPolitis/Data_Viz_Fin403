@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Laurent Politis" />
+
+
+<title>Travaux pratiques</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="libs/navigation-1.0/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+  </button>
+      <a class="navbar-brand" href="https://github.com/LaurentPolitis/Data_Viz_Fin403/">FIN403 Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Syllabus</a></li>
+        <li><a href="Cours14mars.html">1er Cours</a></li>
+        <li><a href="Cours13avril.html">2eme Cours</a></li>
+        <li><a href="Cours_15_avril.html">3eme Cours</a></li>
+        <li><a href="Cours_20_avril.html">4eme Cours</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+<h1 class="title">Travaux pratiques</h1>
+<h4 class="author"><em>Laurent Politis</em></h4>
+<h4 class="date"><em>18 avril 2016</em></h4>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#objectifs">Objectifs</a></li>
+<li><a href="#ressources">Ressources</a><ul>
+<li><a href="#structure-du-programme">Structure du programme</a><ul>
+<li><a href="#premiere-partie-data-mining">Première partie data mining</a></li>
+<li><a href="#seconde-partie-data-visualisation-et-modelisation">Seconde partie data visualisation et modélisation</a></li>
+<li><a href="#exporter-les-graphiques-pour-votre-rapport">Exporter les graphiques pour votre rapport</a></li>
+<li><a href="#package-shiny">Package Shiny</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="objectifs" class="section level1">
+<h1>Objectifs</h1>
+<p>Les objectifs de ce Tp sont de vous aider à écrire votre programme en R de data mining et de data visualisation sur les données que vous avez sélectionné. Les packages shiny et des Addins seront présentés en ouverture.</p>
+<p>Vous devez pour le 27 avril m’envoyer par mail le programme R et les données utilisées aujourd’hui. De plus, un rapport avec une introduction sur les données utilisées, les figures créées par votre programme et des commentaires sur le choix de chaque graphe utilisé est à joindre par mail à cette adresse : <a href="mailto:politis.laurent@gmail.com">politis.laurent@gmail.com</a>.</p>
+</div>
+<div id="ressources" class="section level1">
+<h1>Ressources</h1>
+<p>Aides mémoires de R, Rstudio, et ggplot :</p>
+<ul>
+<li><p><a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a></p></li>
+<li><p><a href="http://nicolascampione.weebly.com/uploads/1/9/4/1/19411255/r_cheat_sheet.pdf" class="uri">http://nicolascampione.weebly.com/uploads/1/9/4/1/19411255/r_cheat_sheet.pdf</a></p></li>
+</ul>
+<div id="structure-du-programme" class="section level2">
+<h2>Structure du programme</h2>
+<div id="premiere-partie-data-mining" class="section level3">
+<h3>Première partie data mining</h3>
+<p>Importer et manipuler les données pour avoir une <em>data.frame</em> facile à manipuler lors de la création des graphiques et de la modélisation statistique.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#</span>
+<span class="co">#  Data Visualisation @Nom_des_données@</span>
+<span class="co">#  @url_du_site_web_des_données@</span>
+<span class="co"># </span>
+<span class="co"># Auteur : </span>
+<span class="co"># Mail :  </span>
+<span class="co"># </span>
+
+<span class="co">#____________________________________________________________________________________________</span>
+<span class="co">#</span>
+<span class="co"># Partie data mining (importer les données sous R et arranger les données)</span>
+<span class="co">#</span>
+<span class="co">#____________________________________________________________________________________________</span>
+
+PATH &lt;-<span class="st"> &quot;C:/Users/Laurent/Documents/Data_Viz_Fin403/Data_Viz_Fin403/&quot;</span>  <span class="co"># le chemin du dossier de travail  à changer</span>
+
+<span class="kw">setwd</span>(PATH)                         <span class="co"># définir le dossier courant de travail &quot;~&quot; designe le dossier &quot;Documents&quot; de </span>
+                                    <span class="co"># windows .. permet d&#39;aller au dossier au-dessus </span>
+
+population_ville &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="kw">paste</span>(PATH,<span class="st">&quot;data/population_ville.csv&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>),<span class="dt">sep=</span><span class="st">&quot;;&quot;</span>, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>,<span class="dt">row.names =</span> <span class="st">&quot;CODGEO&quot;</span> ) <span class="co"># Importer les données</span>
+
+<span class="co"># Une fonction pour enlever les accents </span>
+
+Unaccent &lt;-<span class="st"> </span>function(text) {
+  text &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;[&#39;`^~</span><span class="ch">\&quot;</span><span class="st">]&quot;</span>, <span class="st">&quot; &quot;</span>, text)
+  text &lt;-<span class="st"> </span><span class="kw">iconv</span>(text, <span class="dt">to=</span><span class="st">&quot;ASCII//TRANSLIT//IGNORE&quot;</span>)
+  text &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;[&#39;`^~</span><span class="ch">\&quot;</span><span class="st">]&quot;</span>, <span class="st">&quot;&quot;</span>, text)
+  <span class="kw">return</span>(text)
+}
+
+<span class="co"># Importer les noms des colonnes  </span>
+<span class="co">#____________________________________________________________________________________________</span>
+
+legende &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="kw">paste</span>(PATH,<span class="st">&quot;data/legende.csv&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;;&quot;</span>,<span class="dt">stringsAsFactors =</span> F)  <span class="co"># importer les définitions des colonnes et des légendes </span>
+legende$Code.géographique &lt;-<span class="st"> </span><span class="kw">Unaccent</span>(legende$Code.géographique)                          <span class="co"># enlever les accents </span>
+
+<span class="co"># Importer les codes des regions http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/reg2015.txt </span>
+<span class="co">#____________________________________________________________________________________________</span>
+reg2015 &lt;-<span class="st"> </span><span class="kw">read.delim</span>(<span class="kw">paste</span>(PATH,<span class="st">&quot;data/reg2015.txt&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>),<span class="dt">row.names =</span> <span class="st">&quot;REGION&quot;</span>,<span class="dt">stringsAsFactors =</span> F)
+
+
+<span class="co"># remplacer les codes des régions </span>
+<span class="co">#____________________________________________________________________________________________  </span>
+
+<span class="kw">colnames</span>(population_ville) =<span class="st"> </span>legende[<span class="kw">colnames</span>(population_ville) ==<span class="st"> </span>legende$CODGEO,<span class="st">&quot;Code.géographique&quot;</span>]
+<span class="kw">colnames</span>(population_ville)[<span class="dv">3</span>] =<span class="st"> &quot;Communes&quot;</span>
+<span class="kw">colnames</span>(population_ville)[<span class="dv">4</span>:<span class="dv">10</span>]=<span class="kw">paste</span>(<span class="st">&quot;Population&quot;</span>,<span class="kw">c</span>(<span class="dv">2012</span>,<span class="dv">2007</span>,<span class="dv">1999</span>,<span class="dv">1990</span>,<span class="dv">1982</span>,<span class="dv">1975</span>,<span class="dv">1968</span>))
+population_ville$Region =<span class="st"> </span>reg2015[<span class="kw">as.character</span>(population_ville$Region),<span class="st">&quot;NCC&quot;</span>]</code></pre></div>
+</div>
+<div id="seconde-partie-data-visualisation-et-modelisation" class="section level3">
+<h3>Seconde partie data visualisation et modélisation</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#____________________________________________________________________________________________</span>
+<span class="co">#</span>
+<span class="co"># Partie data visualisation (création des graphiques)</span>
+<span class="co">#</span>
+<span class="co">#____________________________________________________________________________________________</span>
+
+
+### Box plots ( boîtes à moustache )
+<span class="co">#________________________________________________________________________________</span>
+<span class="co">#install.packages(ggplot2)</span>
+<span class="kw">library</span>(ggplot2) <span class="co"># </span>
+
+
+###  echelles des ordonnees modifiees
+<span class="co">#________________________________________________________________________________</span>
+
+
+
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(population_ville$<span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">x=</span><span class="st">&quot;ville&quot;</span>)) +<span class="st"> </span><span class="kw">scale_y_sqrt</span>()
+
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">x=</span><span class="st">&quot;France&quot;</span>)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">scale_y_log10</span>() +<span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">data=</span> population_ville[population_ville$Communes==<span class="st">&quot;Angers&quot;</span>,],<span class="kw">aes</span>(<span class="dt">y =</span> <span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span> ,<span class="dt">x=</span><span class="st">&#39;France&#39;</span>),<span class="dt">color=</span><span class="st">&quot;red&quot;</span>,<span class="dt">size=</span><span class="dv">4</span>)
+
+### Sans GGplot
+<span class="co">#___________________________________________________</span>
+
+<span class="kw">boxplot</span>(population_ville$<span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">log=</span><span class="st">&quot;y&quot;</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">100</span>,<span class="dv">100000000</span>))
+
+
+### Encore des boxplots par région 
+<span class="co">#___________________________________________________</span>
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">y=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">x=</span>Region,<span class="dt">group=</span>Region)) +<span class="st">  </span><span class="kw">scale_y_log10</span>() +<span class="st"> </span><span class="kw">coord_flip</span>()
+
+
+population_ville$dom_tom =<span class="st"> </span>population_ville$Region %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;MARTINIQUE&quot;</span>,<span class="st">&quot;GUYANE&quot;</span>,<span class="st">&quot;GUADELOUPE&quot;</span>,<span class="st">&quot;MARTINIQUE&quot;</span>,<span class="st">&quot;LA REUNION&quot;</span>)
+
+
+p =<span class="st"> </span><span class="kw">ggplot</span>(population_ville,<span class="kw">aes</span>(<span class="dt">y=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">x=</span>Region,<span class="dt">group=</span>Region)) +<span class="st">  </span><span class="kw">scale_y_log10</span>() +<span class="st"> </span><span class="kw">coord_flip</span>()
+
+
+### des box plots exotiques 
+<span class="co">#___________________________________________________</span>
+p +<span class="st"> </span><span class="kw">geom_violin</span>()
+
+p +<span class="st"> </span><span class="kw">geom_jitter</span>()
+
+p +<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">alpha=</span><span class="fl">0.2</span>) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)
+
+### couleurs 
+<span class="co">#___________________________________________________</span>
+
+
+p +<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">alpha=</span><span class="fl">0.2</span>) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>dom_tom))
+
+p +<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">alpha=</span><span class="fl">0.2</span>) +<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>dom_tom))+<span class="st"> </span><span class="kw">facet_grid</span>(<span class="dt">facets =</span> ~dom_tom)
+
+p  +<span class="st"> </span><span class="kw">geom_violin</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>dom_tom))+<span class="st"> </span><span class="kw">facet_grid</span>(<span class="dt">facets =</span> ~dom_tom) +<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">alpha=</span><span class="fl">0.1</span>)
+
+
+######## Courbe de densité proba. ###########################
+<span class="co">#_________________________________________________________________________________________________________________</span>
+
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="dt">x =</span> population_ville$<span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>)) 
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>)) +<span class="kw">scale_x_sqrt</span>()
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">fill=</span><span class="st">&quot;kernel density </span><span class="ch">\n</span><span class="st"> estimation&quot;</span>),<span class="dt">alpha=</span><span class="fl">0.4</span>)  +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +<span class="kw">facet_wrap</span>(<span class="dt">facets =</span> ~Region)
+<span class="kw">ggplot</span>(population_ville) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">fill=</span><span class="st">&quot;kernel density </span><span class="ch">\n</span><span class="st"> estimation&quot;</span>),<span class="dt">alpha=</span><span class="fl">0.4</span>)  +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +<span class="kw">facet_wrap</span>(<span class="dt">facets =</span> ~Region,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">13</span>)
+
+
+######## Histogramme ###############################
+<span class="co">#_________________________________________________________________________________________________________________</span>
+
+<span class="kw">ggplot</span>(population_ville,<span class="kw">aes</span>(<span class="dt">x=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>)) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10000</span>) +<span class="st"> </span><span class="kw">scale_y_log10</span>()
+
+
+<span class="kw">ggplot</span>(population_ville[population_ville$Region==<span class="st">&quot;BRETAGNE&quot;</span>,],<span class="kw">aes</span>(<span class="dt">x=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">fill=</span>Departement)) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1000</span>) +
+<span class="st">  </span><span class="kw">scale_y_sqrt</span>()
+
+<span class="kw">ggplot</span>(population_ville[population_ville$Region==<span class="st">&quot;BRETAGNE&quot;</span>,],<span class="kw">aes</span>(<span class="dt">x=</span><span class="st">`</span><span class="dt">Population 2012</span><span class="st">`</span>,<span class="dt">fill=</span>Departement)) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1000</span>) +
+<span class="st">  </span><span class="kw">scale_y_sqrt</span>()+<span class="kw">facet_wrap</span>(<span class="dt">facets =</span> ~Departement)
+
+
+
+######## Time series ###########################
+<span class="co">#_________________________________________________________________________________________________________________</span>
+<span class="kw">library</span>(reshape2)
+tmp=population_ville[population_ville$Region==<span class="st">&quot;PAYS DE LA LOIRE&quot;</span>,<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>:<span class="dv">10</span>)]
+tmp.m=<span class="kw">melt</span>(tmp)
+tmp.m$variable=<span class="kw">as.numeric</span>(<span class="kw">substr</span>(<span class="dt">x =</span> tmp.m$variable,<span class="dv">12</span>,<span class="dv">15</span>))
+
+<span class="kw">ggplot</span>(tmp.m) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">as.Date</span>(<span class="kw">paste</span>(tmp.m$variable,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)),<span class="dt">y=</span>value,<span class="dt">group=</span>Communes))
+<span class="kw">ggplot</span>(tmp.m) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">as.Date</span>(<span class="kw">paste</span>(tmp.m$variable,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)),<span class="dt">y=</span>value,<span class="dt">group=</span>Communes)) +<span class="kw">scale_y_sqrt</span>()
+<span class="kw">ggplot</span>(tmp.m) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">as.Date</span>(<span class="kw">paste</span>(tmp.m$variable,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)),<span class="dt">y=</span>value,<span class="dt">group=</span>Communes)) +<span class="kw">scale_y_log10</span>()
+
+tmp.m$Angers=tmp.m$Communes==<span class="st">&quot;Angers&quot;</span> <span class="co">#&quot;#CFCDCD&quot;, &quot;#FFFFFF&quot;</span>
+
+tmp.m=tmp.m[tmp.m$value&gt;<span class="dv">10000</span>,]
+
+<span class="kw">ggplot</span>(tmp.m) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">as.Date</span>(<span class="kw">paste</span>(tmp.m$variable,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)),<span class="dt">y=</span>value,<span class="dt">group=</span>Communes,<span class="dt">colour=</span>Angers,<span class="dt">size=</span>Angers))+<span class="kw">scale_y_sqrt</span>()  +
+<span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;#5E5C57&quot;</span>, <span class="st">&quot;red&quot;</span>))+<span class="kw">scale_size_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>))+<span class="kw">geom_text</span>(<span class="dt">data=</span>tmp.m[tmp.m$variable==<span class="dv">2012</span>,],<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">as.Date</span>(<span class="kw">paste</span>(<span class="dv">2012</span>,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>))
+                                                                                                                                   ,<span class="dt">y=</span>(value),<span class="dt">label=</span>Communes)) +<span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">as.Date</span>(<span class="kw">paste</span>(tmp.m$variable,<span class="st">&quot;-01-01&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)),<span class="dt">y=</span>value))
+
+
+
+<span class="co">#Scatter plot  et lm partie modélisation</span>
+<span class="co">#_________________________________________________________________________________________________________________</span>
+
+<span class="co">#install.packages(&quot;ggExtra&quot;)</span>
+<span class="co">#install.packages(&quot;gridExtra&quot;)</span>
+
+<span class="kw">library</span>(<span class="st">&quot;ggExtra&quot;</span>)
+
+
+<span class="kw">ggplot</span>(<span class="dt">data =</span> tmp.m[tmp.m$Communes==<span class="st">&quot;Angers&quot;</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> variable,  <span class="dt">y =</span>value)) +
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="kw">geom_smooth</span>()
+
+gg  =<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> tmp.m[tmp.m$Communes==<span class="st">&quot;Angers&quot;</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> variable,  <span class="dt">y =</span>value)) +
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>)
+
+
+ggExtra::<span class="kw">ggMarginalGadget</span>(gg) <span class="co"># addins pour améliorer le scatter plot </span>
+
+<span class="co">#  calculs des tendances lm()</span>
+<span class="co">#_________________________________________________________________________________________________________________</span>
+
+mod=<span class="kw">lm</span>(tmp.m[tmp.m$Communes==<span class="st">&quot;Angers&quot;</span>,],<span class="dt">formula =</span> value ~<span class="st"> </span>variable)
+
+tmp.m$TREND=<span class="kw">sapply</span>(<span class="dt">X =</span> tmp.m$Communes, <span class="dt">FUN =</span> function(x){<span class="kw">lm</span>(tmp.m[tmp.m$Communes==x,],<span class="dt">formula =</span> value ~<span class="st"> </span>variable)$coefficients[<span class="dv">2</span>]&gt;<span class="dv">0</span>})
+
+
+gg  =<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> tmp.m[tmp.m$Communes==<span class="kw">unique</span>(tmp.m$Communes),], <span class="kw">aes</span>(<span class="dt">x =</span>TREND)) +<span class="st"> </span><span class="kw">geom_bar</span>()</code></pre></div>
+</div>
+<div id="exporter-les-graphiques-pour-votre-rapport" class="section level3">
+<h3>Exporter les graphiques pour votre rapport</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#____________________________________________________________________________________________</span>
+<span class="co">#</span>
+<span class="co"># Partie  exporter les  graphiques  via la méthode graphique sous Rstudio ou à l&#39;aide de fonction R </span>
+<span class="co">#</span>
+<span class="co">#____________________________________________________________________________________________</span>
+
+ggThemeAssist:::<span class="kw">ggThemeAssist</span>() <span class="co"># surligner avec le curseur le graphique ggplot que vous avez créer afin de le modifier </span>
+
+
+ <span class="kw">pdf</span>(<span class="st">&quot;mygraph.pdf&quot;</span>) <span class="co">#   pdf file</span>
+ <span class="kw">png</span>(<span class="st">&quot;mygraph.png&quot;</span>) <span class="co">#   png file</span>
+ <span class="kw">jpeg</span>(<span class="st">&quot;mygraph.jpg&quot;</span>) <span class="co">#  jpeg file</span>
+ <span class="kw">postscript</span>(<span class="st">&quot;mygraph.ps&quot;</span>) <span class="co"># postscript file </span></code></pre></div>
+</div>
+<div id="package-shiny" class="section level3">
+<h3>Package Shiny</h3>
+<p>Le package shiny permet de créer à partir de R des applications web pour interagir avec vos données et programmes R.</p>
+<p><a href="https://laurent7352.shinyapps.io/population/" class="uri">https://laurent7352.shinyapps.io/population/</a></p>
+<p><strong>server.R</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;data.Rdata&quot;</span>)
+
+
+<span class="kw">library</span>(shiny)
+
+<span class="co"># Define server logic required to draw a scatter plot </span>
+<span class="kw">shinyServer</span>(function(input, output) {
+   
+  output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+
+    <span class="kw">library</span>(ggplot2)
+ 
+    
+    <span class="kw">ggplot</span>(<span class="dt">data =</span> tmp.m[tmp.m$Communes==input$select,], <span class="kw">aes</span>(<span class="dt">x =</span> variable,  <span class="dt">y =</span>value)) +
+<span class="st">      </span><span class="kw">geom_point</span>() +<span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>)    +<span class="st"> </span><span class="kw">labs</span>(<span class="dt">title=</span>input$select)
+  })
+  
+})</code></pre></div>
+<p><strong>ui.R</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;data.Rdata&quot;</span>)
+
+<span class="kw">library</span>(shiny)
+
+<span class="co"># Define UI for application that draws a histogram</span>
+<span class="kw">shinyUI</span>(<span class="kw">fluidPage</span>(
+  
+  <span class="co"># Application title</span>
+  <span class="kw">titlePanel</span>(<span class="st">&quot;Mod. tendances&quot;</span>),
+  
+  <span class="co"># Sidebar with a slider input for city </span>
+  <span class="kw">sidebarLayout</span>(
+    <span class="kw">sidebarPanel</span>(
+      <span class="kw">selectInput</span>(<span class="st">&quot;select&quot;</span>, <span class="dt">label =</span> <span class="kw">h3</span>(<span class="st">&quot;Choisir une ville&quot;</span>), 
+                  <span class="dt">choices =</span> nom, 
+                  <span class="dt">selected =</span> <span class="dv">1</span>)),
+    
+    <span class="co"># Show a plot of the generated distribution</span>
+    <span class="kw">mainPanel</span>(
+       <span class="kw">plotOutput</span>(<span class="st">&quot;distPlot&quot;</span>)
+    )
+  )
+))</code></pre></div>
+<p>Pour plus d’information consulter</p>
+<p><a href="http://shiny.rstudio.com/tutorial/" class="uri">http://shiny.rstudio.com/tutorial/</a></p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
